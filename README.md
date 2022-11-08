@@ -9,6 +9,15 @@ Edits:
 * added script to replace `imply` with `select` in relevant Kconfig files
 * modified `src/main/scala/KConfigReader.scala` following the [issue](https://github.com/ckaestne/kconfigreader/issues/2) in the original repository
 
+Usage:
+* follow the build instructions below
+* `chmod +x do.sh && ./do.sh`
+* `cd $LINUX_SRC_DIR`
+* `export SRCARCH=x86 && ../kconfigreader/binary/dumpconf Kconfig > ../kconfigreader/out.rsf`
+* `cp -r ../kconfigreader/binary/ .`
+* `export SRCARCH=x86 && ./../kconfigreader/run.sh de.fosd.typechef.kconfig.KConfigReader --writeDimacs Kconfig out`
+
+This will place an `out.dimacs` file in the `$LINUX_SRC_DIR` folder.
 ---
 
 [![Build Status](https://travis-ci.org/ckaestne/kconfigreader.svg?branch=master)](https://travis-ci.org/ckaestne/kconfigreader)
