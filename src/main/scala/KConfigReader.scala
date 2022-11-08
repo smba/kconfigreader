@@ -61,7 +61,7 @@ object KConfigReader extends App {
     val kconfigPath = options("kconfigpath")
     val out = options("out")
 
-    val kconfigFile = new File(kconfigPath)
+    //val kconfigFile = new File(kconfigPath)
     val rsfFile = new File(out + ".rsf")
     val modelFile = new File(out + ".model")
     val featuresFile = new File(out + ".features")
@@ -71,11 +71,11 @@ object KConfigReader extends App {
     val openFeatureListFile = new File(out + ".open")
     val updatedDimacsFile = new File(out + ".dimacs.2")
 
-    assert(kconfigFile.exists(), "kconfig file does not exist")
+    //assert(kconfigFile.exists(), "kconfig file does not exist")
 
     //creating .rsf file
-    println("dumping model")
-    Process(dumpconf + " %s > %s".format(kconfigFile, rsfFile)).#>(rsfFile).!
+    //println("dumping model")
+    //Process(dumpconf + " %s > %s".format(kconfigFile, rsfFile)).#>(rsfFile).!
 
     //reading model
     println("reading model")
