@@ -3,7 +3,7 @@ kconfigreader
 ---
 **NOTE**
 
-This fork is adapted to (kind of) work with kernel versions 4.x onward (tested with 4.13-rc1). The original `kconfigreader` relies on `dumpconf`, which can fail if the `imply` keyword is used in `Kconfig` files (this was introduced in a Kconfig version past 4.x).
+This fork is adapted to (kind of) work with kernel ver`sions 4.x onward (tested with 4.13-rc1). The original `kconfigreader` relies on `dumpconf`, which can fail if the `imply` keyword is used in `Kconfig` files (this was introduced in a Kconfig version past 4.x).
 
 Edits:
 * added script to replace `imply` with `select` in relevant Kconfig files
@@ -17,7 +17,8 @@ Usage:
 * `cp -r ../kconfigreader/binary/ .`
 * `export SRCARCH=x86 && ./../kconfigreader/run.sh de.fosd.typechef.kconfig.KConfigReader --writeDimacs Kconfig out`
 
-This will place an `out.dimacs` file in the `$LINUX_SRC_DIR` folder.
+This will place an `out.dimacs` file in the `$LINUX_SRC_DIR` folder. I added my version in this fork for convenience.
+
 ---
 
 [![Build Status](https://travis-ci.org/ckaestne/kconfigreader.svg?branch=master)](https://travis-ci.org/ckaestne/kconfigreader)
