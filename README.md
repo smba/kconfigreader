@@ -3,7 +3,7 @@ kconfigreader
 ---
 **NOTE**
 
-This fork is adapted to (kind of) work with kernel ver`sions 4.x onward (tested with 4.13-rc1). The original `kconfigreader` relies on `dumpconf`, which can fail if the `imply` keyword is used in `Kconfig` files (this was introduced in a Kconfig version past 4.x).
+This fork is adapted to (kind of) work with kernel ver`sions 4.x onward (tested with 4.13.3). The original `kconfigreader` relies on `dumpconf`, which can fail if the `imply` keyword is used in `Kconfig` files (this was introduced in a Kconfig version past 4.x).
 
 Edits:
 * added script to replace `imply` with `select` in relevant Kconfig files
