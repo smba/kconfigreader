@@ -1,5 +1,15 @@
 kconfigreader
 ===========
+---
+**NOTE**
+
+This fork is adapted to (kind of) work with kernel versions 4.x onward (tested with 4.13-rc1). The original `kconfigreader` relies on `dumpconf`, which can fail if the `imply` keyword is used in `Kconfig` files (this was introduced in a Kconfig version past 4.x).
+
+Edits:
+* added script to replace `imply` with `select` in relevant Kconfig files
+* modified `src/main/scala/KConfigReader.scala` following the [issue](https://github.com/ckaestne/kconfigreader/issues/2) in the original repository
+
+---
 
 [![Build Status](https://travis-ci.org/ckaestne/kconfigreader.svg?branch=master)](https://travis-ci.org/ckaestne/kconfigreader)
 [![Coverage](https://coveralls.io/repos/ckaestne/kconfigreader/badge.png?branch=master)](https://coveralls.io/github/ckaestne/kconfigreader)
